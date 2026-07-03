@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  sistarefas:
+    container_name: learnerweek
+    image: pgvector/pgvector:pg14
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Leer2025
+      POSTGRES_DB: learnerweek
+    deploy:
+      resources:
+        limits:
+          cpus: '0.4'
+          memory: '512M'

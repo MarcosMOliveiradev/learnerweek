@@ -1,0 +1,1 @@
+ALTER TABLE "pessoas" ALTER COLUMN "updated_at" DROP NOT NULL;

@@ -1,0 +1,24 @@
+{
+  "name": "@LearnerWeek/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base": "./base.cjs",
+    "./next-js": "./next.cjs",
+    "./node": "./node.cjs"
+  },
+  "files": [
+    "base.cjs",
+    "next.cjs",
+    "node.cjs"
+  ],
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "@LearnerWeek/prettier": "workspace:*"
+  },
+  "prettier": "@LearnerWeek/prettier",
+  "eslintConfig": {
+    "extends": ["./base.cjs"]
+  }
+}

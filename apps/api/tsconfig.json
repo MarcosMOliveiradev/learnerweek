@@ -1,0 +1,9 @@
+{
+  "extends": "@LearnerWeek/tsconfig/node.json",
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "paths": {"@/*": ["./src/*"]}
+  }
+}
