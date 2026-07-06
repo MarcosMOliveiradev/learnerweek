@@ -1,0 +1,7 @@
+{
+  "name": "@LearnerWeek/face-api",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": ".venv\\Scripts\\python.exe -m uvicorn app:app --reload"
+  }
+}
