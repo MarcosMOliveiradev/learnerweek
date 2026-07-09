@@ -7,19 +7,19 @@ import babel from '@rolldown/plugin-babel'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(), 
+    react(),
     tailwindcss(),
-    babel({ presets: [reactCompilerPreset()] })
+    // babel({ presets: [reactCompilerPreset()] })
   ],
+
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: 5173,
-    allowedHosts: ['wdesk31', '.localhost']
   },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
-})
+});

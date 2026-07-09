@@ -1,11 +1,14 @@
 export interface FindClosestResponse {
+  distance: number;
+  found: boolean;
   pessoa: {
-    id: string;
+    foto: string | null;
     nome: string;
     areaAtuacao: string;
-    descricao: string | null;
-    foto: string | null;
-  };
-
-  distance: number;
+    descricao?: string | null | undefined;
+    faceEmbedding?: number[] | undefined;
+    createdAt?: Date | null | undefined;
+    updatedAt?: Date | null | undefined;
+    id: string;
+  }
 }

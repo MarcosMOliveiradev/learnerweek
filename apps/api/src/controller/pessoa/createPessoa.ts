@@ -10,6 +10,8 @@ export async function createPessoa(
     nome: z.string(),
     areaAtuacao: z.string(),
     descricao: z.string().optional(),
+
+    datasParticipacao: z.array(z.coerce.date())
   })
 
   
@@ -27,9 +29,12 @@ export async function createPessoa(
     nome: file.fields.nome?.value,
     areaAtuacao: file.fields.areaAtuacao?.value,
     descricao: file.fields.descricao?.value,
+    datasParticipacao: JSON.parse(
+      file.fields.datasParticipacao?.value ?? []
+    )
   }
 
-  const { nome, areaAtuacao, descricao } = pessoaSchema.parse(body);
+  const { nome, areaAtuacao, descricao, datasParticipacao } = pessoaSchema.parse(body);
   const MAX_SIZE = 5 * 1024 * 1024; // 5 MB
 
   const buffer = await file.toBuffer();
@@ -47,7 +52,7 @@ export async function createPessoa(
       areaAtuacao,
       descricao,
       foto: buffer
-    })
+    }, datasParticipacao)
 
     return reply.status(201).send(pessoa);
   } catch (err) {
