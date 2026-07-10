@@ -7,7 +7,7 @@ import { Toaster } from 'sonner'
 export function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Toaster duration={5000} closeButton richColors position='top-center'/>
+      <Toaster duration={10000} closeButton richColors position='top-center'/>
       <AppRoutes />
     </QueryClientProvider>
   )

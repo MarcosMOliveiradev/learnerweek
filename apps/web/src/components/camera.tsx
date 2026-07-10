@@ -57,7 +57,7 @@ export function Camera() {
       setOpen(false);
     } catch (error) {
       const isAppError = error instanceof AppErrors
-      const title = isAppError ? error.message : "Não foi possivel indentificar o usuário"
+      const title = isAppError ? error.message : "Desculpe! Não conseguimos indentifica-lo em nosso cadastro"
       toast.error(title)
     }
   }

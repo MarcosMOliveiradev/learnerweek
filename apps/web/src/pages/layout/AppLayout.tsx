@@ -7,7 +7,7 @@ export function AppLayout() {
         <h1 className="font-bold text-8xl text-center">Semana do aprendiz</h1>
         <h2 className="text-4xl">Facial authentication</h2>
 
-        <strong className="mt-10 text-2xl font-light">Lista de presença para o evento semana do aprendiz</strong>
+        <strong className="mt-10 text-2xl font-light">Lista de convidados</strong>
       </div>
       <div>
         <Outlet />
