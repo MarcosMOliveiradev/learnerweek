@@ -90,8 +90,12 @@ export function Forme() {
     );
     if(response.status === 201) {
       toast.success("Usuário cadastrado na lista do evento!")
+      
+      form.reset()
+      setPreview("")
 
     }
+
   }
 
   return (
@@ -99,7 +103,7 @@ export function Forme() {
       <Form {...form}>
         <strong className="text-4xl">Cadastro de pessoas</strong>
 
-        <form className=" flex flex-col gap-4" onSubmit={form.handleSubmit(cadastro)}>
+        <form className=" flex flex-col max-w-[26rem] gap-4" onSubmit={form.handleSubmit(cadastro)}>
 
           <FormField
             control={form.control}
@@ -149,7 +153,7 @@ export function Forme() {
                   <Textarea
                     id="descricao"
                     placeholder="EX: Melhor programador de sistemas do mundo quiça do Brasil"
-                    className="w-full bg-muted rounded-sm h-[8rem]"
+                    className="bg-muted rounded-sm h-[8rem]"
                     {...field}
                   />
                 </FormControl>
@@ -221,7 +225,7 @@ export function Forme() {
             />
           )}
 
-          <Button className="bg-emerald-700 h-10 rounded-sm cursor-pointer" type="submit">Salvar</Button>
+          <Button className="bg-orange-600 hover:bg-amber-900 h-10 rounded-sm cursor-pointer" type="submit">Salvar</Button>
         </form>
       </Form >
 
